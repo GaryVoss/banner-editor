@@ -3,4 +3,9 @@
 
 .toolbar {
 	@extend .clearfix;
+	&__text {
+		float: left;
+		font-size: $base-font-size;
+		padding: 10px;
+	}
 }

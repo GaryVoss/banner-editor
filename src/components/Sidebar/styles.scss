@@ -9,6 +9,26 @@ $sidebar-border: 1px solid #eee;
 	overflow: scroll;
 	&__group {
 		border-bottom: $sidebar-border;
+		&--active-colour {
+			.sidebar__item--colour {
+				background: #eee;
+			}
+		}
+		&--active-message {
+			.sidebar__item--message {
+				background: #eee;
+			}
+		}
+		&--active-image {
+			.sidebar__item--image {
+				background: #eee;
+			}
+		}
+		&--active-url {
+			.sidebar__item--url {
+				background: #eee;
+			}
+		}
 	}
 	&__item {
 		position: relative;

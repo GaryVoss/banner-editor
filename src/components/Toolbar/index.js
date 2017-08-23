@@ -1,18 +1,22 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 
 import './styles.scss'
 
 import Icon from '../Elements/Icon/'
 
-export default class Toolbar extends Component {
+class Toolbar extends Component {
 	constructor() {
 	    super();
 	    this.state = {
 	    };
 	}
 	render() {
+		const { store } = this.props
+		const storeBnrSize = store.bnrSize
 		return (
 			<div className="toolbar">
+				<p className="toolbar__text">{storeBnrSize}</p>
 				<Icon value="frame-1"/>
 				<Icon value="frame-2"/>
 				<Icon value="frame-3"/>
@@ -22,3 +26,9 @@ export default class Toolbar extends Component {
 		)
 	}
 }
+
+export default connect(store => (
+	{
+		store: store
+	})
+)(Toolbar)
