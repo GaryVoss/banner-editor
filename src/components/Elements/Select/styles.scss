@@ -1,0 +1,43 @@
+@import '../../../scss/variables.scss';
+@import '../../../scss/extend.scss';
+
+.select {
+	position: relative;
+	border-bottom: 1px solid #eee;
+	&__value {
+		width: 100%;
+		outline: none;
+		border: none;
+		border-radius: 0;
+		padding: 10px 10px 10px 35px;
+		font-size: 1.4rem;
+		cursor: pointer;
+		-webkit-appearance: none;
+		   -moz-appearance: radio-container;
+		        appearance: none;
+		&:-moz-focusring {
+	    	color: transparent;
+			text-shadow: 0 0 0 #000;
+		}
+	}
+	&--icon-false {
+		.select__value {
+			padding: 10px;
+		}
+		.select__icon {
+			display: none;
+		}
+	}
+	&__icon, &__arrow {
+		position: absolute;
+		padding: 10px;
+		font-size: 1.6rem;
+		pointer-events: none;
+	}
+	&__icon {
+		left: 0;
+	}
+	&__arrow {
+		right: 0;
+	}
+}

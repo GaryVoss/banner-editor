@@ -1,0 +1,33 @@
+/** //breakpoints */
+$smlBP: 480px;
+$medBP: 768px;
+$lrgBP: 992px;
+$xlrgBP: 1200px;
+
+/** //base variables */
+$base-font-size: 1.4rem;
+$base-border-radius: 2px;
+
+/** //studio fonts */
+$font-roboto: 'Roboto', sans-serif;
+
+/** //studio colours */
+$color-white: #fff;
+$color-black: #555;
+$color-grey: #999;
+$color-mandy: #EA495C;
+$color-flame-pea: #DC5827;
+$color-half-baked: #83CBCE;
+$color-persian-green: #009B9B;
+$color-golden-dream: #EED923;
+$color-qunicy: #5E3A29;
+$color-main-color: $color-mandy;
+$color-highlight: #0096F3;
+
+$color-array:
+	('mandy', $color-mandy, $color-white),
+	('flame-pea', $color-flame-pea, $color-white),
+	('half-baked', $color-half-baked, $color-white),
+	('persian-green', $color-persian-green, $color-white),
+	('golden-dream', $color-golden-dream, $color-black),
+	('qunicy', $color-qunicy, $color-white);

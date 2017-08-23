@@ -1,0 +1,35 @@
+@import '../../../scss/variables.scss';
+@import '../../../scss/extend.scss';
+
+.switch {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 10px;
+	cursor: pointer;
+	&--true {
+		.switch__pin {
+			left: -3px;
+			background: $color-persian-green;
+		}
+	}
+	&--false {
+		.switch__pin {
+			left: 17px;
+			background: #bbb;
+		}
+	}
+	&__pin {
+		position: absolute;
+		top: -3px;
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+	}
+	&__rail {
+		width: 34px;
+		height: 14px;
+		border-radius: 20px;
+		background: #ddd;
+	}
+}

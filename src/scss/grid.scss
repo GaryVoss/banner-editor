@@ -1,0 +1,62 @@
+$grid-half: repeat(2, calc(50% - 6px));
+$grid-quarter: repeat(4, calc(25% - 9px));
+$grid-gap: 12px;
+
+.grid--half {
+	display: grid;
+	grid-template-columns: $grid-half;
+	grid-gap: $grid-gap;
+}
+.grid--quarter {
+	display: grid;
+	grid-template-columns: $grid-quarter;
+	grid-gap: $grid-gap;
+}
+@include bp(sml) {
+	.grid--half--sml {
+		display: grid;
+		grid-template-columns: $grid-half;
+		grid-gap: $grid-gap;
+	}
+	.grid--quarter--sml {
+		display: grid;
+		grid-template-columns: $grid-quarter;
+		grid-gap: $grid-gap;
+	}
+}
+@include bp(med) {
+	.grid--half--med {
+		display: grid;
+		grid-template-columns: $grid-half;
+		grid-gap: $grid-gap;
+	}
+	.grid--quarter--med {
+		display: grid;
+		grid-template-columns: $grid-quarter;
+		grid-gap: $grid-gap;
+	}
+}
+@include bp(lrg) {
+	.grid--half--lrg {
+		display: grid;
+		grid-template-columns: $grid-half;
+		grid-gap: $grid-gap;
+	}
+	.grid--quarter--lrg {
+		display: grid;
+		grid-template-columns: $grid-quarter;
+		grid-gap: $grid-gap;
+	}
+}
+@include bp(xlrg) {
+	.grid--half--xlrg {
+		display: grid;
+		grid-template-columns: $grid-half;
+		grid-gap: $grid-gap;
+	}
+	.grid--quarter--xlrg {
+		display: grid;
+		grid-template-columns: $grid-quarter;
+		grid-gap: $grid-gap;
+	}
+}

@@ -1,0 +1,37 @@
+@import '../../../scss/variables.scss';
+@import '../../../scss/extend.scss';
+
+.button {
+	height: 40px;
+	padding: 10px;
+	background: #ddd;
+	border: 0;
+	border-radius: $base-border-radius;
+	outline: none;
+	cursor: pointer;
+	&:hover {
+		background: darken(#ddd, 5%);
+	}
+	&--full {
+		width: 100%;
+	}
+	&--icon-false {
+		.button__icon {
+			display: none;
+		}
+	}
+	&__text, &__icon {
+		font-size: 1.6rem;
+		float: left;
+	}
+	&__icon {
+		margin-right: 10px;
+	}
+	&--submit {
+		background: $color-persian-green;
+		color: $color-white;
+		&:hover {
+			background: darken($color-persian-green, 5%);
+		}
+	}
+}

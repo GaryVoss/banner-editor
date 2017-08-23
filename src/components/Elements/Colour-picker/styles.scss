@@ -1,0 +1,73 @@
+@import '../../../scss/variables.scss';
+@import '../../../scss/extend.scss';
+
+.colour-picker {
+	width: 100%;
+	position: relative;
+	@extend .clearfix;
+	margin-bottom: 10px;
+	&__desc {
+		padding-bottom: 5px;
+		color: $color-persian-green;
+		font-size: $base-font-size;
+	}
+	&__swatch {
+		float: left;
+		width: 40px;
+		padding: 10px 10px 11px 10px;
+		color: transparent;
+		border: 1px solid $color-grey;
+		border-radius: $base-border-radius;
+		font-size: $base-font-size;
+		cursor: pointer;
+		@extend .noSelect;
+	}
+	&__input {
+		position: relative;
+		float: right;
+		width: calc(100% - 45px);
+		background: $color-white;
+		border: 1px solid $color-grey;
+		border-radius: $base-border-radius;
+		input {
+			width: calc(100% - 38px);
+			pointer-events: none;
+			@extend .noSelect;
+		}
+	}
+	&__icon {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 38px;
+		padding: 5px;
+		border-left: 1px solid $color-grey;
+		cursor: pointer;
+		@extend .noSelect;
+	}
+	&__drop {
+		position: absolute;
+		z-index: 10;
+		top: calc(100% + 5px);
+		width: 100%;
+		padding: 5px;
+		background: #ddd;
+		border-radius: $base-border-radius;
+		&-swatch {
+			float: left;
+			width: calc(20% - 10px);
+			height: 30px;
+			margin: 5px;
+			background: $color-white;
+			border-radius: $base-border-radius;
+			list-style: none;
+			cursor: pointer;
+		}
+		&--open-true {
+			display: block;
+		}
+		&--open-false {
+			display: none;
+		}
+	}
+}

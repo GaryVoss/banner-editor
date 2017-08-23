@@ -1,0 +1,13 @@
+@import '../../scss/variables.scss';
+@import '../../scss/extend.scss';
+
+.edit {
+	padding: 10px;
+	&__group-input {
+		@extend .grid--half--lrg;
+	}
+	&__group-colour {
+		@extend .grid--half--med;
+		@extend .grid--quarter--lrg;
+	}
+}

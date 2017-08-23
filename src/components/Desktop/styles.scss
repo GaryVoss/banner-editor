@@ -1,0 +1,9 @@
+@import '../../scss/variables.scss';
+@import '../../scss/extend.scss';
+
+.desktop {
+	display: grid;
+	grid-template-columns: 300px auto;
+	grid-template-rows: auto; 
+	height: calc(100vh - 60px);
+}

@@ -1,0 +1,37 @@
+@import '../../scss/variables.scss';
+@import '../../scss/extend.scss';
+
+$sidebar-border: 1px solid #eee;
+
+.sidebar {
+	border-top: $sidebar-border;
+	border-right: $sidebar-border;
+	overflow: scroll;
+	&__group {
+		border-bottom: $sidebar-border;
+	}
+	&__item {
+		position: relative;
+		padding: 10px;
+		font-size: $base-font-size;
+		&-icon {
+			margin-right: 10px;
+		}
+		&--header {
+			opacity: 0.6;
+			border-bottom: $sidebar-border;
+		}
+		&--click {
+			&:hover {
+				background: #eee;
+				cursor: pointer;
+			}
+		}
+		&--switch {
+			padding-right: 54px;
+		}
+	}
+	&__button {
+		margin: 10px;
+	}
+}

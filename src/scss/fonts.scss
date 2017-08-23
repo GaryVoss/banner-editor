@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+@font-face {
+	font-family: 'icomoon';
+	src: url('../fonts/icons/icomoon.ttf') format('truetype'),
+		url('../fonts/icons/icomoon.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon--"], [class*=" icon--"] {
+	font-family: 'icomoon' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon {
+	&--frame-1:before {
+		content: "\e902";
+	}
+	&--frame-2:before {
+		content: "\e903";
+	}
+	&--frame-3:before {
+		content: "\e904";
+	}
+	&--frame-4:before {
+		content: "\e905";
+	}
+	&--frame-plus:before {
+		content: "\e906";
+	}
+	&--images:before {
+	  content: "\e907";
+	}
+	&--link:before {
+	  content: "\e908";
+	}
+	&--palette:before {
+	  content: "\e909";
+	}
+	&--replay:before {
+	  content: "\e90a";
+	}
+	&--save:before {
+	  content: "\e90b";
+	}
+	&--send:before {
+	  content: "\e90c";
+	}
+	&--txt:before {
+	  content: "\e90d";
+	}
+	&--arrow-down:before {
+	  content: "\e90e";
+	}
+	&--cross:before {
+	  content: "\e90f";
+	}
+	&--dot:before {
+	  content: "\e910";
+	}
+	&--dot-outline:before {
+	  content: "\e911";
+	}
+	&--info:before {
+	  content: "\e912";
+	}
+	&--lock:before {
+	  content: "\e900";
+	}
+	&--user:before {
+	  content: "\e901";
+	}
+	&--dims:before {
+		content: "\e913";
+	}
+}

@@ -1,0 +1,9 @@
+@import '../../../scss/variables.scss';
+@import '../../../scss/extend.scss';
+
+.title {
+	background: $color-persian-green;
+	color: $color-white;
+	padding: 10px 15px;
+	font-size: 1.6rem;
+}

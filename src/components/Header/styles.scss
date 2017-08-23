@@ -1,0 +1,68 @@
+@import '../../scss/variables.scss';
+@import '../../scss/extend.scss';
+
+.header {
+	width: 100%;
+	height: 60px;
+	background: #fff;
+	&__logo {
+		height: 20px;
+		margin: 20px 0 20px 20px;
+		cursor: pointer;
+		@extend .noSelect;
+	}
+	&__tools {
+		width: 50%;
+		height: 60px;
+		float: right;
+	}
+	&__user {
+		float:right;
+		display: grid;
+		justify-items: center;
+		align-items: center;
+		width: 40px;
+		height: 40px;
+		margin: 10px;
+		border-radius: 50%;
+		background: #ccc;
+		cursor: pointer;
+		p {
+			color: #fff;
+			font-size: 2rem;
+			@extend .noSelect;
+		}
+		@each $color in $color-array {
+		    $name: nth($color, 1);
+		    $value: nth($color, 2);
+		    &--#{$name} {
+				background: $value;
+				&:hover {
+					background: darken($value, 5%);
+				}
+			}
+		}
+		&--open-true {
+			border: 2px solid $color-highlight;
+		}
+	}
+	&__drop {
+		position: absolute;
+		right: 0;
+		margin: 5px;
+		padding: 10px;
+		background: #fff;
+		border: 1px solid #ddd;
+		list-style: none;
+		&-item {
+			margin-bottom: 10px;
+			font-size: 1.6rem;
+		}
+		&--open-false {
+			display: none;
+		}
+		&--open-true {
+			display: block;
+		}
+	}
+}
