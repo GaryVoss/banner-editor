@@ -24,7 +24,7 @@ class Sidebar extends Component {
 		const { store, changeTab } = this.props
 		return (
 			<sidebar className="sidebar">
-				<Select options={BannerSizes} hasIcon={'true'} icon={'dims'} onClick={changeTab.TabURL}/>
+				<Select options={BannerSizes} hasIcon={'true'} icon={'dims'}/>
 				<ul className="sidebar__group">
 					<li className="sidebar__item sidebar__item--header">{'Global settings'}</li>
 					<li className="sidebar__item sidebar__item--switch">
@@ -88,6 +88,5 @@ export default connect(store => (
 	}),
 	(dispatch) => ({
 		changeTab: bindActionCreators(whichTab, dispatch),
-		changeTab: bindActionCreators(whichSize, dispatch),
 	})
 )(Sidebar);
