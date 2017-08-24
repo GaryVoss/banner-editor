@@ -7,16 +7,15 @@ import Icon from '../Elements/Icon/'
 
 class Toolbar extends Component {
 	constructor() {
-	    super();
+	    super()
 	    this.state = {
-	    };
+	    }
 	}
 	render() {
 		const { store } = this.props
-		const storeBnrSize = store.bnrSize
 		return (
 			<div className="toolbar">
-				<p className="toolbar__text">{storeBnrSize}</p>
+				<p className="toolbar__text">{store.bnrSize}</p>
 				<Icon value="frame-1"/>
 				<Icon value="frame-2"/>
 				<Icon value="frame-3"/>

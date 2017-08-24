@@ -1,0 +1,67 @@
+@import '../../../scss/variables.scss';
+@import '../../../scss/extend.scss';
+
+.banner-select {
+	position: relative;
+	border-bottom: 1px solid $color-border;
+	&__value {
+		width: 100%;
+		outline: none;
+		border: none;
+		border-radius: 0;
+		padding: 10px 10px 10px 35px;
+		font-size: 1.4rem;
+		cursor: pointer;
+		-webkit-appearance: none;
+		   -moz-appearance: radio-container;
+		        appearance: none;
+		&:-moz-focusring {
+	    	color: transparent;
+			text-shadow: 0 0 0 #000;
+		}
+	}
+	&--icon-false {
+		.select__value {
+			padding: 10px;
+		}
+		.select__icon {
+			display: none;
+		}
+	}
+	&__icon, &__arrow {
+		position: absolute;
+		top: 0;
+		padding: 10px;
+		font-size: 1.6rem;
+		pointer-events: none;
+	}
+	&__icon {
+		left: 0;
+	}
+	&__arrow {
+		right: 0;
+	}
+	&__drop {
+		width: calc(100% - 10px);
+		position: absolute;
+		z-index: 10;
+		margin: 0 5px;
+		background: #eee;
+		border: 1px solid $color-border;
+		&-item {
+			width: 100%;
+			padding: 10px;
+			font-size: $base-font-size;
+			cursor: pointer;
+			&:hover {
+				background: #ddd;
+			}
+		}
+		&--open-false {
+			display: none;
+		}
+		&--open-true {
+			display: block;
+		}
+	}
+}

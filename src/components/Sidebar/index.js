@@ -5,13 +5,10 @@ import {bindActionCreators} from 'redux'
 import './styles.scss'
 
 import * as whichTab from '../../actions/action.whichTab'
-import * as whichSize from '../../actions/action.whichSize'
 
-import Select from '../Elements/Select/'
+import BannerSelect from '../Elements/Banner-select/'
 import Button from '../Elements/Button/'
 import Switch from '../Elements/Switch/'
-
-import { BannerSizes } from '../../data/data.banner-sizes'
 
 class Sidebar extends Component {
 	constructor() {
@@ -24,7 +21,7 @@ class Sidebar extends Component {
 		const { store, changeTab } = this.props
 		return (
 			<sidebar className="sidebar">
-				<Select options={BannerSizes} hasIcon={'true'} icon={'dims'}/>
+				<BannerSelect/>
 				<ul className="sidebar__group">
 					<li className="sidebar__item sidebar__item--header">{'Global settings'}</li>
 					<li className="sidebar__item sidebar__item--switch">
