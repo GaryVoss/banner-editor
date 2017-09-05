@@ -5,8 +5,8 @@ import tab from './reducer.tab'
 import bnrSize from './reducer.bnrSize'
 
 export default combineReducers({
-  loggedIn,
-  profile,
-  tab,
-  bnrSize,
+	loggedIn,
+	profile,
+	tab,
+	bnrSize,
 })

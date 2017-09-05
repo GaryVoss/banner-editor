@@ -15,6 +15,12 @@
 	&--full {
 		width: 100%;
 	}
+	&--center {
+		text-align: center;
+		.button__text {
+			float: none;
+		}
+	}
 	&--icon-false {
 		.button__icon {
 			display: none;
@@ -32,6 +38,13 @@
 		color: $color-white;
 		&:hover {
 			background: darken($color-persian-green, 5%);
+		}
+	}
+	&--attention {
+		background: $color-mandy;
+		color: $color-white;
+		&:hover {
+			background: darken($color-mandy, 5%);
 		}
 	}
 }

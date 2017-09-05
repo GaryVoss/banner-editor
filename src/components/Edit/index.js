@@ -17,18 +17,17 @@ class Edit extends Component {
 	}
 	render() {
 		const { store } = this.props
-		const storeTab = store.tab
 		let output = ''
-		if(storeTab === 'colour') {
+		if(store.tab === 'colour') {
 			output = <EditColours/>
 		}
-		else if(storeTab === 'message') {
+		else if(store.tab === 'message') {
 			output = <EditMessages/>
 		}
-		else if(storeTab === 'image') {
+		else if(store.tab === 'image') {
 			output = <EditImages/>
 		}
-		else if(storeTab === 'url') {
+		else if(store.tab === 'url') {
 			output = <EditUrl/>
 		}
 		return (

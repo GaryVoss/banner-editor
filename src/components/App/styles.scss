@@ -1,0 +1,21 @@
+@import '../../scss/variables.scss';
+@import '../../scss/extend.scss';
+
+.app {
+	&--login-true {
+		.app__login {
+			display: none;
+		}
+		.app__interface {
+			display: block;
+		}
+	}
+	&--login-false {
+		.app__login {
+			display: block;
+		}
+		.app__interface {
+			display: none;
+		}
+	}
+}

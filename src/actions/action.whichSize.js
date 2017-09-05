@@ -38,8 +38,8 @@ export function Bnr728x90() {
 		type: 'BNR_728X90', 
 	};
 }
-export function Bnr468x90() {
+export function Bnr468x60() {
 	return {
-		type: 'BNR_468X90', 
+		type: 'BNR_468X60', 
 	};
 }

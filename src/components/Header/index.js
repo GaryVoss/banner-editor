@@ -1,11 +1,15 @@
 import React, { Component } from 'react'
+import * as firebase from 'firebase'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import * as loggedIn from '../../actions/action.loggedIn'
 
 import './styles.scss'
 
 import Button from '../Elements/Button/'
 import Logo from '../../imgs/logos/studio-logo.svg'
 
-export default class Header extends Component {
+class Header extends Component {
 	constructor() {
 	    super();
 	    this.state = {
@@ -16,6 +20,12 @@ export default class Header extends Component {
 			drop : false,
 	    }
 	    this.toggleDrop = this.toggleDrop.bind(this)
+	}
+	signOutUser() {
+		firebase.auth().signOut()
+		this.props.changeLogin.LoggedInFalse()
+		console.log('sign out')
+		console.log(this.props.store.loggedIn)
 	}
 	toggleDrop() {
 	    this.setState({drop: !this.state.drop})
@@ -34,9 +44,18 @@ export default class Header extends Component {
 				<div className={`header__drop header__drop--open-${this.state.drop}`}>
 					<p className="header__drop-item">{this.state.userName}</p>
 					<p className="header__drop-item">{this.state.userEmail}</p>
-					<Button type="submit" text="Sign out" hasIcon="false" icon="" modify=""/>
+					<Button type="submit" event={() => this.signOutUser()} text="Sign out" hasIcon="false" icon="" modify=""/>
 				</div>
 			</header>
 		)
 	}
 }
+
+export default connect(store => (
+	{
+		store: store
+	}),
+	(dispatch) => ({
+		changeLogin: bindActionCreators(loggedIn, dispatch),
+	})
+)(Header);

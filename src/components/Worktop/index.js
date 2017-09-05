@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 
 import './styles.scss'
 
@@ -7,20 +8,27 @@ import Toolbar from '../Toolbar/'
 import Preview from '../Preview/'
 import Edit from '../Edit/'
 
-export default class Worktop extends Component {
+class Worktop extends Component {
 	constructor() {
-	    super();
+	    super()
 	    this.state = {
-	    };
+	    }
 	}
 	render() {
+		const { store } = this.props
 		return (
 			<section className="worktop">
 				<Title text="2017 Dynamic banners | Template A"/>
 				<Toolbar />
-				<Preview size="300x250"/>
+				<Preview size={store.bnrSize}/>
 				<Edit />
 			</section>
 		)
 	}
 }
+
+export default connect(store => (
+	{
+		store: store
+	})
+)(Worktop)

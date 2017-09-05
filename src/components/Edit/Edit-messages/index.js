@@ -6,7 +6,7 @@ export default class EditMessages extends Component {
 	constructor() {
 	    super();
 	    this.state = {
-		    
+
 	    };
 	}
 	render() {

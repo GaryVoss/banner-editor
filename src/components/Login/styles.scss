@@ -1,0 +1,38 @@
+@import '../../scss/variables.scss';
+@import '../../scss/extend.scss';
+
+.login {
+	position: fixed;
+	z-index: 1000;
+	width: 100%;
+	height: 100%;
+	display: table;
+	table-layout: fixed;
+	vertical-align: middle;
+	text-align: center;
+	background: $color-white;
+}
+.login__wrap {
+	width: 100%;
+	display: table-cell;
+	vertical-align: middle;
+}
+.login__component {
+	max-width: 300px;
+	margin: 0 auto;
+	text-align: left;
+}
+.login__trigger {
+	margin-top: 5px;
+	font-size: 1.4rem;
+	text-decoration: underline;
+	color: #009B9B;
+	&:hover {
+		cursor: pointer;
+	}
+}
+.login__error {
+	margin-top: 10px;
+	font-size: 1.4rem;
+	color: $color-mandy;
+}
